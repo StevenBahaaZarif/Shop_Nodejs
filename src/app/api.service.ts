@@ -62,12 +62,13 @@ export class ApiService {
     return this.http.post(`http://localhost:${this.port}/admin/edit-product`, newProduct);
   }
 
+  register(data: any): Observable<any> {
+    return this.http.post(`http://localhost:${this.port}/signup`, data);
+  }
 
   //Steven
 
-  
 
-  
 
 
   getAllMovies(pageNumber:number=1,pageSize:number=21): Observable<any> {
